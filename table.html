@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Go Agile: SkyWingAgile</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <!--   Core JS Files   -->
+    <script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../assets/js/bootstrap.min.js" ></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/dashboard.css" rel="stylesheet" />
+
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('customersCtrl', function($scope, $http) {
+            $scope.names=[];
+            $scope.names.push({
+                Name:"Marutinandan",
+                Country:"India"
+            });
+            $scope.names.push({
+                Name:"Marutinandan2",
+                Country:"India3"
+            });
+
+            $scope.add = function(objEnhancedChecklistPostData) {
+                $scope.names.push({
+                    Name:"Marutinandan3333",
+                    Country:"India3"
+                });
+            }
+        });
+    </script>
+
+</head>
+<body>
+<div ng-app="myApp" ng-controller="customersCtrl">
+<input type="button" value="add" ng-click="add()"/>
+    <table class="table table-bordered">
+        <tr ng-repeat="x in names">
+            <td>{{ x.Name }}</td>
+            <td>{{ x.Country }}</td>
+        </tr>
+    </table>
+
+
+</div>
+
+    <nav class="navbar navbar-default bg-white border-bottom-purple">
+        <!-- Brand and toggle get grouped for better mobile display -->
+
+        <div class="container-fluid ">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">SkyWing</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav ">
+                    <li><a href="#">Plan</a></li>
+                    <li><a href="#">Track</a></li>
+                    <li><a href="#">Quality</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Opt1</a></li>
+                            <li><a href="#">Opt2</a></li>
+                            <li><a href="#">Opt3</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Opt4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+                <ul class="nav navbar-nav navbar-right ">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Logout</a></li>
+                            <li><a href="#">Action1</a></li>
+                            <li><a href="#">Action1</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Action1</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+            </div>
+
+
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="main-panel">
+        <div class="row  panel panel-default">
+            <div class="col-md-2"><h4>Iteration Status :</h4>  </div>
+            <div class="col-md-3" >
+                <input type="text" class="form-control" placeholder="Search...">
+            </div>
+            <div class="col-md-7" ><button type="button" class="btn btn-default">Search</button></div>
+        </div>
+        <div class="row  panel panel-default">
+
+            <table class="table table-bordered">
+                <tr>
+                    <td>uuuu<h1>&nbsp;</h1></td>
+                    <td>Dakota Rice</td>
+                    <td>$36,738</td>
+                    <td>Niger</td>
+                    <td>Oud-Turnhout</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="col-md-12  panel panel-default"><h3>Test Table</h3></div>
+            <div class="panel-body">
+                <table class="table table-hover table-striped">
+                    <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th>Country</th>
+                    <th>City</th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Dakota Rice</td>
+                        <td>$36,738</td>
+                        <td>Niger</td>
+                        <td>Oud-Turnhout</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Minerva Hooper</td>
+                        <td>$23,789</td>
+                        <td>Curaçao</td>
+                        <td>Sinaai-Waas</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sage Rodriguez</td>
+                        <td>$56,142</td>
+                        <td>Netherlands</td>
+                        <td>Baileux</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Philip Chaney</td>
+                        <td>$38,735</td>
+                        <td>Korea, South</td>
+                        <td>Overland Park</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Doris Greene</td>
+                        <td>$63,542</td>
+                        <td>Malawi</td>
+                        <td>Feldkirchen in Kärnten</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Mason Porter</td>
+                        <td>$78,615</td>
+                        <td>Chile</td>
+                        <td>Gloucester</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Place sticky footer content here.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
